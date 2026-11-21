@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Robot Trader — Can a robot day trade? We're finding out</title>
+<meta name="description" content="My Robot Trader is a separate robot from the makers of My Robot I.S.A., being tested in the open on practice money. Nothing to buy yet. Sign up for updates on the test.">
+<link rel="canonical" href="https://myrobottrader.com/">
+<meta property="og:title" content="Can a robot day trade? We're finding out">
+<meta property="og:description" content="A separate robot with its own rules, in testing on practice money. Nothing to buy yet.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://myrobottrader.com/">
+<meta property="og:site_name" content="My Robot Trader">
+<meta property="og:image" content="https://myrobottrader.com/avatar.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="avatar.png">
+<link rel="apple-touch-icon" href="avatar.png">
+<meta name="theme-color" content="#0B0B0D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --deep:#0B0B0D; --deep2:#17171B; --rule:#2E2E36; --green:#00E87A; --pink:#EA00AB;
+    --ink:#FFFFFF; --pink-ink:#FF5CCB; --muted:#B4B4BF; --eye:#9A9AA6;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--deep);color:var(--ink);font-family:Poppins,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:var(--green)}
+  a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px}
+  header{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:20px 0}
+  .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:Anton,Impact,sans-serif;font-size:20px;letter-spacing:.02em;text-transform:uppercase;min-height:44px}
+  .brand svg{width:40px;height:40px;border-radius:10px;flex:none}
+  .brand .p,h1 .p{color:var(--pink)}
+  .hdr-r{display:flex;align-items:center;gap:14px}
+  .sister{color:var(--muted);font-weight:500;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;min-height:44px;white-space:nowrap}
+  .sister:hover{color:var(--ink)}
+  .tag{display:inline-block;background:var(--green);color:var(--deep);font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:6px 12px;white-space:nowrap}
+  @media(max-width:480px){.hdr-r .tag{display:none}.brand{font-size:17px}}
+  .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;padding:28px 0 12px}
+  @media(min-width:700px){.hero{grid-template-columns:1.4fr 1fr;gap:28px}}
+  .hero .logo{width:110px;order:-1;justify-self:start;border-radius:22px;border:3px solid var(--green);display:block}
+  @media(min-width:700px){.hero .logo{width:100%;max-width:280px;order:0;justify-self:center;border-radius:28px}}
+  .eyebrow{margin:0;color:var(--muted);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+  h1{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(44px,9vw,72px);line-height:1.02;margin:14px 0 14px;letter-spacing:.01em;text-transform:uppercase}
+  .promise{font-size:22px;font-weight:700;margin:0 0 8px}
+  .promise .g{color:var(--green)}
+  .line{font-size:17px;line-height:1.6;color:var(--muted);margin:0 0 6px}
+  h2{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:34px;text-transform:uppercase;margin:44px 0 6px;letter-spacing:.01em}
+  .card{background:var(--deep2);border:1px solid var(--rule);border-radius:22px;padding:24px;margin:28px 0}
+  .card h2{margin-top:0}
+  .card p{margin:0 0 12px;line-height:1.6;color:var(--muted)}
+  form{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin-top:14px}
+  .field{display:flex;flex-direction:column;gap:6px;flex:1 1 240px}
+  label{font-size:14px;color:var(--muted)}
+  input[type=email]{height:52px;padding:0 16px;border-radius:14px;border:1px solid #55555F;background:var(--deep);color:var(--ink);font:inherit;font-size:16px;width:100%}
+  .btn{display:inline-block;text-decoration:none;font:inherit;font-weight:800;font-size:17px;padding:15px 26px;border-radius:999px;background:var(--green);color:var(--deep);border:0;cursor:pointer}
+  .btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--green)}
+  @media(max-width:520px){button[type=submit]{flex:1 1 100%}}
+  .note{font-size:13px;color:var(--eye);margin:10px 0 0}
+  #msg{font-size:14px;color:var(--pink-ink);margin:10px 0 0;min-height:1.4em}
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:28px 0 0}
+  .fact{background:var(--deep2);border:1px solid var(--rule);border-radius:16px;padding:18px}
+  .fact h3{margin:0 0 6px;font-family:Anton,Impact,sans-serif;font-weight:400;font-size:22px;letter-spacing:.02em;text-transform:uppercase;color:var(--green)}
+  .fact p{margin:0;font-size:15px;line-height:1.55;color:var(--muted)}
+  .two{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
+  .two div{flex:1 1 340px}
+  footer{border-top:1px solid var(--rule);margin-top:48px;padding:24px 0 40px;color:var(--eye);font-size:13px;line-height:1.6}
+  footer strong{color:var(--ink)}
+  footer h3{color:var(--ink);font-size:14px;margin:18px 0 4px}
+  .consent{flex:1 1 100%;display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted);line-height:1.5;cursor:pointer}
+  .consent input{width:22px;height:22px;flex:none;margin:0;accent-color:var(--green)}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  #msg.ok{color:var(--green)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="#top" aria-label="My Robot Trader">
+      <svg viewBox="0 0 400 400" aria-hidden="true"><use href="#mrt-logo"></use></svg>
+      <span>My Robot <span class="p">Trader</span></span>
+    </a>
+    <span class="hdr-r"><a class="sister" href="https://myrobotisa.com">My Robot I.S.A. &rarr;</a><span class="tag">In testing</span></span>
+  </header>
+<main id="top">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">From the makers of My Robot I.S.A.</p>
+      <h1>Can a robot <span class="p">day trade?</span> We&rsquo;re finding out.</h1>
+      <p class="promise">A separate robot. <span class="g">Its own rules.</span></p>
+      <p class="line">We&rsquo;re testing it in the open, on practice money. Nothing to buy yet. If it doesn&rsquo;t pass, we&rsquo;ll say so.</p>
+    </div>
+    <svg class="logo" viewBox="0 0 400 400" role="img" aria-label="The My Robot Trader logo: the visor robot on black, with a pulse line in its visor">
+      <defs>
+        <g id="mrt-logo">
+          <rect width="400" height="400" fill="#0B0B0D"></rect>
+          <rect x="194" y="72" width="12" height="42" rx="6" fill="#00E87A"></rect>
+          <circle cx="200" cy="68" r="13" fill="#EA00AB"></circle>
+          <path d="M105 190A95 95 0 0 1 295 190V262Q295 294 263 294H137Q105 294 105 262Z" fill="#00E87A"></path>
+          <rect x="122" y="164" width="156" height="72" rx="36" fill="#0B0B0D"></rect>
+          <rect x="136" y="178" width="18" height="6" rx="3" fill="#3A3A44"></rect>
+          <polyline points="138,200 168,200 180,182 194,220 208,188 218,200 262,200" fill="none" stroke="#EA00AB" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></polyline>
+          <rect x="112" y="306" width="176" height="50" rx="8" fill="#EA00AB"></rect>
+          <text x="200" y="344" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="36" letter-spacing="2" fill="#FFFFFF">TRADER</text>
+        </g>
+      </defs>
+      <use href="#mrt-logo"></use>
+    </svg>
+  </section>
+
+  <section class="card" id="updates" aria-labelledby="news-h">
+    <h2 id="news-h">Follow the test</h2>
+    <p>Updates on how the test is going, by email. Good news or bad. No sales emails.</p>
+    <form id="f" novalidate>
+      <div class="field">
+        <label for="email">Your email</label>
+        <input id="email" type="email" autocomplete="email" placeholder="you@email.com">
+      </div>
+      <button class="btn" type="submit" id="go">Send me updates</button>
+      <label class="consent"><input type="checkbox" id="consent"> <span>Email me updates on the My Robot Trader test. I can unsubscribe any time.</span></label>
+      <div class="hp" aria-hidden="true"><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
+    </form>
+    <p id="msg" role="status" aria-live="polite"></p>
+    <p class="note">This is a separate list from My Robot I.S.A. How we look after your email is at the <a href="#your-email">bottom of the page</a>.</p>
+  </section>
+
+  <section class="facts" aria-label="Where the test stands">
+    <div class="fact"><h3>Where it stands</h3><p>Most of the ideas we tested have been retired. One is still being tested.</p></div>
+    <div class="fact"><h3>Practice money only</h3><p>Every trade so far is on a practice account. No real money is involved.</p></div>
+    <div class="fact"><h3>How you&rsquo;ll hear</h3><p>Updates go out by email to people who sign up. Nothing is for sale while it&rsquo;s in testing.</p></div>
+  </section>
+
+  <section class="card two" aria-labelledby="two-h">
+    <div>
+      <h2 id="two-h">Two robots. Two sets of rules.</h2>
+      <p>My Robot I.S.A. invests once a week inside an ISA. My Robot Trader is a different product: it trades within the day, can&rsquo;t sit in an ISA and is bought separately.</p>
+    </div>
+    <a class="btn ghost" href="https://myrobotisa.com">See My Robot I.S.A.</a>
+  </section>
+</main>
+  <footer>
+    <p><strong>Not financial advice.</strong> This is education about building and testing software. My Robot Trader is in testing on practice money and isn&rsquo;t for sale. Day trading is high risk and you can lose money quickly. What a system did in a test, ours included, says nothing about what it will do next. We&rsquo;re software engineers, not financial advisers. My Robot Trader isn&rsquo;t a broker or an investment adviser, and it isn&rsquo;t authorised or regulated by the FCA.</p>
+    <h3 id="your-email">Your email</h3>
+    <p>If you sign up for updates, My Robot Trader (run by Amit Patel) keeps your email address and which link brought you here, to send you updates on the test. That&rsquo;s all it&rsquo;s used for, and it&rsquo;s never sold. It is a separate list from My Robot I.S.A.: signing up here doesn&rsquo;t add you to anything there.</p>
+    <p>Your details are stored with Supabase in London, and the emails are sent through Resend. They handle the data only on our behalf, and anything processed outside the UK is covered by UK-approved safeguards. We keep your details until you unsubscribe or ask us to delete them. Every email has an unsubscribe link; to see or delete your data, email <a href="mailto:hello@myrobottrader.com">hello@myrobottrader.com</a>. The lawful basis is your consent, given by ticking the box. If you&rsquo;re unhappy with how your data is handled, you can complain to the Information Commissioner&rsquo;s Office at <a href="https://ico.org.uk/make-a-complaint/">ico.org.uk/make-a-complaint</a>.</p>
+    <p>My Robot Trader is a trading name of Night Shift Labs Ltd, registered in England and Wales, company number 17591971 &middot; <a href="mailto:hello@myrobottrader.com">hello@myrobottrader.com</a></p>
+    <p>&copy; 2026 My Robot Trader &middot; <a href="https://myrobotisa.com">My Robot I.S.A.</a></p>
+  </footer>
+</div>
+<script>
+(function(){
+  // My Robot Trader updates: its own list (join_trader_updates), separate from the My Robot I.S.A. waitlist.
+  var live = ["myrobottrader.com","www.myrobottrader.com"].indexOf(location.hostname) !== -1;
+  var f=document.getElementById("f"), m=document.getElementById("msg"), b=document.getElementById("go");
+  var q=new URLSearchParams(location.search), src=q.get("src")||q.get("utm_source")||"";
+  var done="You're on the list. We'll email you from hello@myrobottrader.com when there's news on the test.";
+  function say(t,ok){ m.textContent=t; m.className=ok?"ok":""; }
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    var email=document.getElementById("email").value.trim();
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ say("That email doesn't look right.",false); return; }
+    if(!document.getElementById("consent").checked){ say("Tick the box so we're allowed to email you.",false); return; }
+    if(document.getElementById("website").value){ say(done,true); f.reset(); return; }
+    if(!live){ say("Preview only: nothing was saved.",true); return; }
+    b.disabled=true; say("Adding you…",true);
+    fetch("https://vxnestmhtjotidhzzqbo.supabase.co/rest/v1/rpc/join_trader_updates",{method:"POST",headers:{"apikey":"sb_publishable_hjvkAbVw82CKg2rdDZgVcw_XUDbmerV","Content-Type":"application/json"},
+      body:JSON.stringify({p_email:email.toLowerCase(),p_consent:true,p_source:src}), signal:(window.AbortSignal&&AbortSignal.timeout)?AbortSignal.timeout(15000):undefined})
+      .then(function(r){ return r.ok?r.json():Promise.reject(r.status); })
+      .then(function(res){ if(res==="ok"){ say(done,true); f.reset(); } else if(res==="rate_limited"){ say("Too many sign-ups just now. Try again in a minute.",false); } else say("Something's not right with that email.",false); })
+      .catch(function(){ say("Something went wrong. Try again in a minute.",false); })
+      .then(function(){ b.disabled=false; });
+  });
+})();
+</script>
+</body>
+</html>
