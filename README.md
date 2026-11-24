@@ -7,7 +7,8 @@ Served by GitHub Pages from `docs/` on `main`, the same way `myrobotisa-assets` 
 - `docs/how.html`, `docs/tested.html`: "How we're doing this" and "What we tested" (split out 24 Nov 2026).
 - `docs/site.css`, `docs/menu.js`: shared styles and the side menu (fixed on wide screens, a drawer with a
   bottom-left button on phones, as on myrobotisa.com). A new page needs a row in each page's `<nav class="side">`.
-- `docs/avatar.png`: the logo (favicon and share image).
+- `docs/avatar.png`: the logo (favicon and share image). Since 24 Nov 2026 the robot has two candlesticks for
+  eyes; the PNG is a 512px render of the inline SVG in `index.html`, so change both together.
 - `docs/CNAME`: the custom domain.
 
 Sign-ups go to `public.trader_updates` in the "Sites & ops" Supabase project through the
