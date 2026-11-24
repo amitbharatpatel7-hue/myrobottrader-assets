@@ -19,75 +19,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --deep:#0B0B0D; --deep2:#17171B; --rule:#2E2E36; --green:#00E87A; --pink:#EA00AB;
-    --ink:#FFFFFF; --pink-ink:#FF5CCB; --muted:#B4B4BF; --eye:#9A9AA6;
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0;background:var(--deep);color:var(--ink);font-family:Poppins,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
-  a{color:var(--green)}
-  a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--green);outline-offset:3px}
-  .wrap{max-width:760px;margin:0 auto;padding:0 20px}
-  header{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:20px 0}
-  .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:Anton,Impact,sans-serif;font-size:20px;letter-spacing:.02em;text-transform:uppercase;min-height:44px}
-  .brand svg{width:40px;height:40px;border-radius:10px;flex:none}
-  .brand .p,h1 .p{color:var(--pink)}
-  .hdr-r{display:flex;align-items:center;gap:14px}
-  .sister{color:var(--muted);font-weight:500;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;min-height:44px;white-space:nowrap}
-  .sister:hover{color:var(--ink)}
-  .tag{display:inline-block;background:var(--green);color:var(--deep);font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:6px 12px;white-space:nowrap}
-  @media(max-width:480px){.hdr-r .tag{display:none}.brand{font-size:17px}}
-  .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;padding:28px 0 12px}
-  @media(min-width:700px){.hero{grid-template-columns:1.4fr 1fr;gap:28px}}
-  .hero .logo{width:110px;order:-1;justify-self:start;border-radius:22px;border:3px solid var(--green);display:block}
-  @media(min-width:700px){.hero .logo{width:100%;max-width:280px;order:0;justify-self:center;border-radius:28px}}
-  .eyebrow{margin:0;color:var(--muted);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
-  h1{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(44px,9vw,72px);line-height:1.02;margin:14px 0 14px;letter-spacing:.01em;text-transform:uppercase}
-  .promise{font-size:22px;font-weight:700;margin:0 0 8px}
-  .promise .g{color:var(--green)}
-  .line{font-size:17px;line-height:1.6;color:var(--muted);margin:0 0 6px}
-  h2{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:34px;text-transform:uppercase;margin:44px 0 6px;letter-spacing:.01em}
-  .card{background:var(--deep2);border:1px solid var(--rule);border-radius:22px;padding:24px;margin:28px 0}
-  .card h2{margin-top:0}
-  .card p{margin:0 0 12px;line-height:1.6;color:var(--muted)}
-  form{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin-top:14px}
-  .field{display:flex;flex-direction:column;gap:6px;flex:1 1 240px}
-  label{font-size:14px;color:var(--muted)}
-  input[type=email]{height:52px;padding:0 16px;border-radius:14px;border:1px solid #55555F;background:var(--deep);color:var(--ink);font:inherit;font-size:16px;width:100%}
-  .btn{display:inline-block;text-decoration:none;font:inherit;font-weight:800;font-size:17px;padding:15px 26px;border-radius:999px;background:var(--green);color:var(--deep);border:0;cursor:pointer}
-  .btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--green)}
-  @media(max-width:520px){button[type=submit]{flex:1 1 100%}}
-  .note{font-size:13px;color:var(--eye);margin:10px 0 0}
-  #msg{font-size:14px;color:var(--pink-ink);margin:10px 0 0;min-height:1.4em}
-  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:28px 0 0}
-  .fact{background:var(--deep2);border:1px solid var(--rule);border-radius:16px;padding:18px}
-  .fact h3{margin:0 0 6px;font-family:Anton,Impact,sans-serif;font-weight:400;font-size:22px;letter-spacing:.02em;text-transform:uppercase;color:var(--green)}
-  .fact p{margin:0;font-size:15px;line-height:1.55;color:var(--muted)}
-  .say{margin:36px 0 0}
-  .say article{border-top:1px solid var(--rule);padding:22px 0}
-  .say article:last-child{border-bottom:1px solid var(--rule)}
-  .say h3{margin:0 0 8px;font-size:22px;line-height:1.3;font-weight:700;color:var(--ink)}
-  .say h3 .g{color:var(--green)}
-  .say p{margin:0;font-size:16px;line-height:1.6;color:var(--muted)}
-  .tested h3{margin:26px 0 8px;font-size:18px;font-weight:700;color:var(--green)}
-  .tested ol,.tested ul{margin:0;padding-left:22px}
-  .tested li{margin:0 0 14px;font-size:16px;line-height:1.6;color:var(--muted)}
-  .tested li strong{color:var(--ink)}
-  .tested li em{display:block;font-style:normal;color:var(--ink)}
-  .two{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
-  .two div{flex:1 1 340px}
-  footer{border-top:1px solid var(--rule);margin-top:48px;padding:24px 0 40px;color:var(--eye);font-size:13px;line-height:1.6}
-  footer strong{color:var(--ink)}
-  footer h3{color:var(--ink);font-size:14px;margin:18px 0 4px}
-  .consent{flex:1 1 100%;display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted);line-height:1.5;cursor:pointer}
-  .consent input{width:22px;height:22px;flex:none;margin:0;accent-color:var(--green)}
-  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-  #msg.ok{color:var(--green)}
-</style>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<div class="wrap">
+<a class="skip" href="#main">Skip to content</a>
+<nav class="side" id="side" aria-label="Pages">
+  <a class="side-brand" href="./" aria-label="My Robot Trader home"><img src="avatar.png" alt=""><span>My Robot <b>Trader</b></span></a>
+  <ol>
+    <li><a href="./" class="on" aria-current="page">Home</a></li>
+    <li><a href="how.html">How we&rsquo;re doing this</a></li>
+    <li><a href="tested.html">What we tested</a></li>
+  </ol>
+  <div class="side-cta"><p>In testing on practice money. Nothing to buy yet.</p><a class="btn" href="./#updates">Follow the test</a></div>
+</nav>
+<button id="scrim" tabindex="-1" aria-hidden="true"></button>
+<button id="menubtn" aria-label="Pages menu" aria-expanded="false" aria-controls="side"><svg class="i-bars" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg><svg class="i-x" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
+<div class="wrap" id="top">
   <header>
     <a class="brand" href="#top" aria-label="My Robot Trader">
       <svg viewBox="0 0 400 400" aria-hidden="true"><use href="#mrt-logo"></use></svg>
@@ -95,7 +42,7 @@
     </a>
     <span class="hdr-r"><span class="tag">In testing</span></span>
   </header>
-<main id="top">
+<main id="main">
   <section class="hero">
     <div>
       <p class="eyebrow">From the makers of My Robot I.S.A.</p>
@@ -143,46 +90,10 @@
     <div class="fact"><h3>How you&rsquo;ll hear</h3><p>Updates go out by email to people who sign up. Nothing is for sale while it&rsquo;s in testing.</p></div>
   </section>
 
-  <section class="say" aria-labelledby="say-h">
-    <h2 id="say-h">How we&rsquo;re doing this</h2>
-    <article>
-      <h3>We tested thirteen ideas in public. Ten failed and two were studies. <span class="g">One is still being tested.</span></h3>
-      <p>Most did not survive trading costs, and we said so each time. The one still in test trades on practice money only.</p>
-    </article>
-    <article>
-      <h3>Most days nothing happens. A few days matter. <span class="g">We&rsquo;ll show you all of them when the test is done.</span></h3>
-      <p>The robot waits for a share to open sharply higher or lower on news, then follows fixed rules for the rest of that day. It holds nothing overnight. When the test ends we&rsquo;ll publish every day of it, the quiet ones and the losing ones included.</p>
-    </article>
-    <article>
-      <h3>No tips, no promises: <span class="g">the rules, the losses and the wins, in the open.</span></h3>
-      <p>Nothing here is a recommendation to trade. Day trading can lose money quickly, including all of the money you put in, and a test result says nothing about what happens next.</p>
-    </article>
-  </section>
-
-  <section class="tested" aria-labelledby="tested-h">
-    <h2 id="tested-h">What we tested, and what happened</h2>
-    <h3>Still being tested (1)</h3>
-    <ul>
-      <li><strong>Follow the gap.</strong> When a share opens sharply higher or lower on news, trade in that direction for the rest of the day. It is on practice money. Its last check is read on 28 December 2026, and we&rsquo;ll say what it shows either way.</li>
-    </ul>
-    <h3>Tested and retired (10)</h3>
-    <ol>
-      <li><strong>Opening-range breakout.</strong> Buy when a share breaks out of its first few minutes&rsquo; range. <em>Trading costs took almost everything it made.</em></li>
-      <li><strong>Back to the average.</strong> Bet that a share which runs away from its average price for the day comes back. <em>Small wins, full-size losses. No better than entering at random.</em></li>
-      <li><strong>Fade the gap.</strong> Bet that a share which opens sharply up or down reverses. <em>Looked good on three months, then lost on six months it had never seen. We&rsquo;d picked a lucky stretch.</em></li>
-      <li><strong>Late-day momentum on the big index funds.</strong> A published academic finding that the last half hour follows the first. <em>The move is real but too small to pay for trading it at our size.</em></li>
-      <li><strong>The same rules on triple-leveraged funds.</strong> More movement, same rules. <em>The extra movement went into stopped-out trades, not profit.</em></li>
-      <li><strong>Crypto within the day.</strong> The same approach on Bitcoin and Ether. <em>Lost before costs and after, and each trade cost about nine times as much as a share trade.</em></li>
-      <li><strong>Hold for three days after a sharp fall.</strong> From a trading reel. <em>Made a little after costs, but missed our pass mark in both halves of the test.</em></li>
-      <li><strong>A big morning move the market doesn&rsquo;t share.</strong> Trade a share that moves hard in the first half hour on its own. <em>Lost before costs. An early wobble isn&rsquo;t news the way an overnight gap is.</em></li>
-      <li><strong>The gap rule on forty other shares.</strong> The rule still in test, unchanged, on names it wasn&rsquo;t found on. <em>Made nothing. A warning we&rsquo;re keeping in view for the rule itself.</em></li>
-      <li><strong>Cheap options after a sharp fall.</strong> The reel&rsquo;s actual trade, tested on real option prices. <em>Most tickets lost more than half their cost, and days after a fall did no better than random days.</em></li>
-    </ol>
-    <h3>Studies, not trades (2)</h3>
-    <ul>
-      <li><strong>Do shares bounce after a sharp fall?</strong> Yes, over about three days. But both ways of trading it (numbers 7 and 10) failed.</li>
-      <li><strong>Is the gap rule really about company results?</strong> Not shown either way. Too few trades to tell.</li>
-    </ul>
+  <section class="card" aria-labelledby="open-h">
+    <h2 id="open-h">Tested in the open</h2>
+    <p>We tested thirteen ideas in public. Ten failed and two were studies. One is still being tested.</p>
+    <p class="more" style="margin-top:14px"><a class="btn ghost" href="how.html">How we&rsquo;re doing this</a> <a class="btn ghost" href="tested.html">What we tested</a></p>
   </section>
 
   <section class="card two" aria-labelledby="two-h">
@@ -227,5 +138,6 @@
   });
 })();
 </script>
+<script src="menu.js"></script>
 </body>
 </html>
