@@ -118,3 +118,19 @@
   .chip.off{background:#3A0A2E;color:#FF8FDC}
   .chip.st{border:1px solid var(--muted);color:var(--ink);padding:4px 11px}
   @media(max-width:520px){.stats{gap:8px}.stat{padding:14px 12px}.stat b{font-size:40px}.stat span{font-size:13px}}
+  /* "How we're doing this" page: three cards and the count (24 Nov 2026) */
+  .how3{display:grid;grid-template-columns:1fr;gap:14px;margin:24px 0 0}
+  @media(min-width:780px){.how3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+  .how3 article{background:var(--deep2);border:1px solid var(--rule);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:12px}
+  .how3 .lbl{margin:0;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--pink-ink)}
+  .how3 h2{margin:0;font-family:inherit;text-transform:none;letter-spacing:0;font-size:19px;line-height:1.35;font-weight:700}
+  .how3 h2 .g{color:var(--green)}
+  .how3 p{margin:0;font-size:15px;line-height:1.6;color:var(--muted)}
+  .count{margin:14px 0 0;background:var(--deep2);border:1px solid var(--rule);border-radius:22px;padding:18px 22px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
+  .count h2{margin:0;font-family:inherit;text-transform:none;letter-spacing:0;font-size:17px;font-weight:700}
+  .count ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+  .count li{background:var(--deep);border:1px solid var(--rule);border-radius:14px;padding:10px 16px;display:flex;align-items:baseline;gap:10px}
+  .count b{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:32px;line-height:1;color:var(--ink)}
+  .count b.pk{color:var(--pink-ink)} .count b.gr{color:var(--green)}
+  .count span{font-size:14px;color:var(--muted)}
+  @media(max-width:520px){.count ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;gap:8px}.count li{flex-direction:column;align-items:flex-start;gap:4px;padding:10px 12px}}
