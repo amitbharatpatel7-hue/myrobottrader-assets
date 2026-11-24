@@ -64,6 +64,12 @@
   .fact{background:var(--deep2);border:1px solid var(--rule);border-radius:16px;padding:18px}
   .fact h3{margin:0 0 6px;font-family:Anton,Impact,sans-serif;font-weight:400;font-size:22px;letter-spacing:.02em;text-transform:uppercase;color:var(--green)}
   .fact p{margin:0;font-size:15px;line-height:1.55;color:var(--muted)}
+  .say{margin:36px 0 0}
+  .say article{border-top:1px solid var(--rule);padding:22px 0}
+  .say article:last-child{border-bottom:1px solid var(--rule)}
+  .say h3{margin:0 0 8px;font-size:22px;line-height:1.3;font-weight:700;color:var(--ink)}
+  .say h3 .g{color:var(--green)}
+  .say p{margin:0;font-size:16px;line-height:1.6;color:var(--muted)}
   .two{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
   .two div{flex:1 1 340px}
   footer{border-top:1px solid var(--rule);margin-top:48px;padding:24px 0 40px;color:var(--eye);font-size:13px;line-height:1.6}
@@ -127,9 +133,25 @@
   </section>
 
   <section class="facts" aria-label="Where the test stands">
-    <div class="fact"><h3>Where it stands</h3><p>Most of the ideas we tested have been retired. One is still being tested.</p></div>
+    <div class="fact"><h3>Rules first</h3><p>Every idea&rsquo;s pass mark is written down before it is tested. It doesn&rsquo;t move afterwards.</p></div>
     <div class="fact"><h3>Practice money only</h3><p>Every trade so far is on a practice account. No real money is involved.</p></div>
     <div class="fact"><h3>How you&rsquo;ll hear</h3><p>Updates go out by email to people who sign up. Nothing is for sale while it&rsquo;s in testing.</p></div>
+  </section>
+
+  <section class="say" aria-labelledby="say-h">
+    <h2 id="say-h">How we&rsquo;re doing this</h2>
+    <article>
+      <h3>We tested thirteen trading ideas in public. Ten failed. <span class="g">One is still being tested.</span></h3>
+      <p>Most did not survive trading costs, and we said so each time. The one still in test trades on practice money only.</p>
+    </article>
+    <article>
+      <h3>Most days nothing happens. A few days matter. <span class="g">We&rsquo;ll show you all of them when the test is done.</span></h3>
+      <p>The robot waits for a share to open sharply higher or lower on news, then follows fixed rules for the rest of that day. It holds nothing overnight. When the test ends we&rsquo;ll publish every day of it, the quiet ones and the losing ones included.</p>
+    </article>
+    <article>
+      <h3>No tips, no promises: <span class="g">the rules, the losses and the wins, in the open.</span></h3>
+      <p>Nothing here is a recommendation to trade. Day trading can lose money quickly, including all of the money you put in, and a test result says nothing about what happens next.</p>
+    </article>
   </section>
 
   <section class="card two" aria-labelledby="two-h">

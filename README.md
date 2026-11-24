@@ -12,3 +12,7 @@ Sign-ups go to `public.trader_updates` in the "Sites & ops" Supabase project thr
 myrobottrader.com; anywhere else it says "Preview only".
 
 No results, prices or performance claims go on this site while the strategy is in testing.
+
+The "How we're doing this" section (24 Nov 2026) carries three lines Amit chose, cut to fit that rule: no
+trade record, no figures. Its counts (thirteen ideas, ten failed) come from `day-trade-lab/reports/ideas.json`
+and must be changed here when that list changes. "No signals" was left out until a lawyer has looked at it.
