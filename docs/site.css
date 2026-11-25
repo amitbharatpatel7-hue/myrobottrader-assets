@@ -134,3 +134,15 @@
   .count b.pk{color:var(--pink-ink)} .count b.gr{color:var(--green)}
   .count span{font-size:14px;color:var(--muted)}
   @media(max-width:520px){.count ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;gap:8px}.count li{flex-direction:column;align-items:flex-start;gap:4px;padding:10px 12px}}
+  /* "Why not just download a trading skill?" on the How page (25 Nov 2026) */
+  .why{margin:14px 0 0;background:var(--deep2);border:1px solid var(--rule);border-radius:22px;padding:24px 22px}
+  .why .lbl{margin:0 0 10px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--pink-ink)}
+  .why h2{margin:0;font-family:inherit;text-transform:none;letter-spacing:0;font-size:22px;line-height:1.3;font-weight:700}
+  .why-lead{margin:10px 0 0;font-size:16px;line-height:1.6;color:var(--muted)}
+  .why ul{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:1fr;gap:12px}
+  @media(min-width:700px){.why ul{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  .why li{background:var(--deep);border:1px solid var(--rule);border-radius:16px;padding:16px 18px}
+  .why h3{margin:0;font-family:inherit;text-transform:none;letter-spacing:0;font-size:17px;line-height:1.35;font-weight:700;color:var(--green)}
+  .why li p{margin:6px 0 0;font-size:15px;line-height:1.6;color:var(--muted)}
+  .why li a{color:var(--ink)}
+  .why-end{margin:18px 0 0;font-size:16px;line-height:1.6;color:var(--ink)}
