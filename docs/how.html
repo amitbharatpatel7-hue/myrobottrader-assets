@@ -83,6 +83,36 @@
       <li><b class="gr">1</b><span>in test</span></li>
     </ul>
   </section>
+  <section class="day" aria-labelledby="day-h">
+    <p class="lbl">The rules, step by step</p>
+    <h2 id="day-h">How a day works</h2>
+    <p class="day-lead">An illustration of the rules, not a record of trades. The line is made up to show each step. Pick a kind of day and press Play.</p>
+    <div class="day-tabs" role="group" aria-label="Kind of day">
+      <button type="button" data-day="0" aria-pressed="true">A trade that runs to the close</button>
+      <button type="button" data-day="1" aria-pressed="false">A trade that is stopped out</button>
+      <button type="button" data-day="2" aria-pressed="false">A day with no trade</button>
+    </div>
+    <div class="day-box">
+      <div class="day-chart">
+        <svg id="day-svg" viewBox="0 0 640 400" role="img" aria-label="Illustration of the day, drawn step by step"></svg>
+        <ul class="day-key">
+          <li><i class="k-in"></i>robot gets in</li>
+          <li><i class="k-out"></i>robot gets out</li>
+          <li><i class="k-stop"></i>stop</li>
+          <li><i class="k-prev"></i>yesterday&rsquo;s close</li>
+          <li><i class="k-range"></i>first 15 minutes</li>
+        </ul>
+        <div class="day-ctl">
+          <button type="button" id="day-back">Back</button>
+          <button type="button" id="day-play" class="go">Play</button>
+          <button type="button" id="day-next">Next</button>
+          <span id="day-count" aria-live="polite"></span>
+        </div>
+      </div>
+      <ol id="day-steps" class="day-steps"></ol>
+    </div>
+    <p class="day-note">Times are UK time in winter, when the US market opens at 14:30. The picture is not a real share or a real day, and it says nothing about how often each kind of day happens. Nothing here is a recommendation to trade.</p>
+  </section>
   <section class="why" aria-labelledby="why-h">
     <p class="lbl">A fair question</p>
     <h2 id="why-h">Why not just download a trading skill for an AI?</h2>
@@ -107,5 +137,6 @@
   </footer>
 </div>
 <script src="menu.js"></script>
+<script src="day.js"></script>
 </body>
 </html>
