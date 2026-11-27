@@ -18,6 +18,6 @@ myrobottrader.com; anywhere else it says "Preview only".
 No results, prices or performance claims go on this site while the strategy is in testing.
 
 The "How we're doing this" page (24 Nov 2026) carries three lines Amit chose, cut to fit that rule: no
-trade record, no figures. Its counts (fourteen ideas, ten failed; `how.html` also carries "How a day works" (`day.js`, added 26 Nov 2026): an illustration of the rules drawn step by step, with made-up lines and no money figures, also on the list for the lawyer; the count also appears in the "Why not just download a trading skill?" section of `how.html`, added 25 Nov 2026, which names no other project and is on the list for the lawyer) come from `day-trade-lab/reports/ideas.json`
+trade record, no figures. Its counts (fifteen ideas, ten failed; `how.html` also carries "How a day works" (`day.js`, added 26 Nov 2026): an illustration of the rules drawn step by step, with made-up lines and no money figures, also on the list for the lawyer; the count also appears in the "Why not just download a trading skill?" section of `how.html`, added 25 Nov 2026, which names no other project and is on the list for the lawyer) come from `day-trade-lab/reports/ideas.json`
 and must be changed here when that list changes. The "What we tested" page is the same
-fourteen rows in plain words with no figures; add or move a row here whenever the lab's list changes. "No signals" was left out until a lawyer has looked at it.
+fifteen rows in plain words with no figures; add or move a row here whenever the lab's list changes. "No signals" was left out until a lawyer has looked at it.
